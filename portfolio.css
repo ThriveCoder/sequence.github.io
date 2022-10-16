@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: unset;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif
+}
+
+body {
+    background: #183a1d;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: #183a1d;
+}
+header div.name {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+header div.name div.logo img {
+    width: 50px;
+    height: 50px;
+}
+header div.name span.first-name {
+    background-color: #e1eedd;
+    color: #183a1d;
+    padding: 7px;
+    margin: 0 5px;
+    border-radius: 1.5vh;
+    font-weight: 700;
+}
+header div.mobile-menu-wrapper {
+    display: none;
+}
+header ul li {
+    display: inline;
+    margin: 0 5px;
+    padding: 5px;
+}
+header ul li:hover {
+    background: #e1eedd;
+    color: #183a1d;
+    border-radius: 1vh;
+}
+
+
+@media only screen and (min-width:300px) and (max-width: 480px) {
+    header div.mobile-menu-wrapper {
+        display: block;
+    }
+    .chgHdrClr {
+        background: #e1eedd;
+        color: #183a1d;
+    }
+    header .menu {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+        background-color: #e1eedd;
+        color: #183a1d;
+        font-size: 20px;
+        width: 100%;
+        padding: 20px 0;
+        transition: 0.5s ease-out;
+        display: none;
+    }
+    .visible {
+        visibility: hidden;
+    }
+    /* #mainMenu {
+        display: none;
+    } */
+    header ul li {
+        margin-top: 15px;
+    }
+    header ul li:hover {
+        color: #e1eedd;
+        background: #183a1d;
+        border-radius: 1vh;
+    }
+    .nav {
+        font-size: 23px;
+        cursor: pointer;
+    }
+    div.enoch {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 35px;
+        font-weight: 700;
+        background: #d3ebd6;
+        color: #183a1d;
+        padding: 20px;
+        margin: 0 10px;
+        border-radius: 1.5vh;
+    }
+    div.i-am {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    div.enoch .welcoming .small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+    div.enoch .welcoming .small pre {
+        margin: 20px 10px;
+    }
+    .name {
+        margin-top: 50px;
+    }
+    div.enoch .welcoming .small hr {
+        height: 30px;
+    }
+    .languages {
+        font-size: 15px;
+    }
+    .languages i {
+        margin: 0 5px;
+    }
+    .technical-skills, .portfolio, .about, .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .technical-skills h1 , .portfolio h1, .about h1, .contact h1 {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    .technical-skills p, .portfolio p {
+        color: rgb(207, 202, 202);
+        margin: 10px 0;
+    }
+    .skill i {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    .portfolio .project img {
+        width: 100%;
+    }
+    .portfolio .project a {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .portfolio .project a button, .about button, .send-btn button {
+        padding: 10px 25px;
+        background: #d3ebd6;
+        color: #183a1d;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 0.5vh;
+        border: none;
+        outline: none;
+        margin: 20px 0;
+        width: 150px;
+    }
+    .portfolio .project h4 {
+        margin: 10px 0;
+        font-size: 22px;
+    }
+    div.hr {
+        padding: 30px 80px;
+    }
+    .about i.fa-user-circle {
+        font-size: 150px;
+        margin: 20px;
+    }
+    .about span h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .about button, .send-btn button {
+        width: 250px;
+        font-weight: 900;
+    }
+    .msg-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .div {
+        display: flex;
+        flex-direction: column;
+    }
+    .div input {
+        margin-top: 10px;
+        background: none;
+        outline: none;
+        border: 1px #d3ebd6 solid;
+        width: 250px;
+        height: 30px;
+        padding: 8px 10px;
+    }
+    .message {
+        /* display: none; */
+        width: 250px;
+        height: 200px;
+        border: 1px solid #d3ebd6;
+        margin: 20px 0;
+        padding: 10px;
+        line-height: 30px;
+        outline: none;
+        overflow-y: hidden;
+        text-align: left;
+    }
+    div:empty::before {
+        color: grey;
+        cursor: text;
+    }
+    div[data-placeholder]:not([data-placeholder=""]):empty::before {
+        content: attr(data-placeholder);
+    }
+    .send-btn button {
+        margin-top: -10px;
+    }
+    .other a {
+        margin: 10px;
+        font-size: 17px;
+    }
+}
